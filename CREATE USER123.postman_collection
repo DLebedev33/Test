@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "22819f25-7380-4051-9b42-81cfcce2c052",
+		"name": "CREATE USER",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32744803"
+	},
+	"item": [
+		{
+			"name": "an empty field email",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email in lowercase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"tenaliramakrishna@mail.ru\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email in uppercase",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"KROTOV@MAIL.RU\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email with numbers in the account name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"KROTOV123@MAIL.RU\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email with numbers in the domain part",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"KROTOV@12MAIL.RU\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email with a special character in the account name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"kro-tov@mail.ru\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email without account name",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"@mail.ru\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email with a special character in the domain",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"krotov@ma-il.ru\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Email without a domain part",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"krotov@\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		}
+	]
+}
