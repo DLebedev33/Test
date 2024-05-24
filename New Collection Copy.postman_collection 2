@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "ca19dea8-7c97-45e0-a57b-6049e0274f17",
+		"name": "New Collection Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "32744803"
+	},
+	"item": [
+		{
+			"name": "users page 12",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://gorest.co.in/public/v2/users?page=12",
+					"protocol": "https",
+					"host": [
+						"gorest",
+						"co",
+						"in"
+					],
+					"path": [
+						"public",
+						"v2",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "12"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "user search",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://gorest.co.in/public/v2/users/6879856"
+			},
+			"response": []
+		},
+		{
+			"name": "an empty registration form",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"t1enali.ramakrishna@15ce.com\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "created users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Ramakrishna\",\r\n        \"email\": \"tenali.ramakrishna@15ce.com\",\r\n        \"gender\": \"male\",\r\n        \"status\": \"active\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "changing user information",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"name\": \"Tenali Rasffmakrishna\",\r\n        \"email\": \"tenali.ramafewfkrishna@15ce.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users/6911734"
+			},
+			"response": []
+		},
+		{
+			"name": "deleting a user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "182c59dc4eaadcedf6fde8f600d1bd6d6d9f3ae0eb39e884cb6893d8acd8b8de"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://gorest.co.in/public/v2/users/6911734"
+			},
+			"response": []
+		}
+	]
+}
